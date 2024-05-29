@@ -16,7 +16,10 @@ return {
             "neovim/nvim-lspconfig",
             event = "BufReadPre",
             config = function()
-                require("lspconfig").rubocop.setup{}
+                require("lspconfig").rubocop.setup({
+                    cmd = { "bundle", "exec", "rubocop", "--lsp" },
+                    filetypes = { "ruby" },
+                })
             end
         }
     }
