@@ -4,7 +4,8 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      style = "storm",       -- night, storm, day, moon
+      style = "night",
+      -- style = "day",
       transparent = true,
       styles = {
         sidebars = "transparent",
@@ -14,7 +15,9 @@ return {
     },
     config = function()
       vim.o.background = "dark"
-      vim.cmd("colorscheme tokyonight")
+      vim.cmd("colorscheme tokyonight-night")
+      -- vim.o.background = "light"
+      -- vim.cmd("colorscheme tokyonight-day")
     end
   },
 

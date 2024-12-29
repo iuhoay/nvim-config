@@ -1,29 +1,28 @@
 return {
-    "tpope/vim-fugitive",
-    {
-        "lewis6991/gitsigns.nvim",
-        event = "BufReadPre",
-        init = function()
-            require("gitsigns").setup({
-                current_line_blame = true,
-            })
-        end,
+  "tpope/vim-fugitive",
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "BufReadPre",
+    init = function()
+      require("gitsigns").setup({
+        current_line_blame = true,
+      })
+    end,
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
     },
-
-    {
-        "kdheepak/lazygit.nvim",
-        cmd = {
-            "LazyGit",
-            "LazyGitConfig",
-            "LazyGitCurrentFile",
-            "LazyGitFilter",
-            "LazyGitFilterCurrentFile",
-        },
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-        keys = {
-            { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-        }
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     }
+  }
 }
