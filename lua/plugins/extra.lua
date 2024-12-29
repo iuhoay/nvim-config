@@ -35,5 +35,19 @@ return {
         end,
       })
     end,
-  }
+  },
+
+  {
+    "echasnovski/mini.nvim",
+    config = function()
+      require("mini.statusline").setup({
+        -- use_icons = false
+        use_icons = vim.g.have_nerd_fonts,
+      })
+
+      -- require("mini.starter").setup({
+      --   autoopen = true,
+      -- })
+    end,
+  },
 }

@@ -7,6 +7,12 @@ return {
       vim.o.timeoutlen = 300
     end,
     opts = {
-    }
+    },
+    keys = {
+      {
+        "<leader>lu",
+        "<cmd>Lazy update<cr>",
+      },
+    },
   },
 }
